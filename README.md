@@ -6,6 +6,12 @@ The simple script install Tidal Connect for rAudio 64 bit (Pi 4)
 >
 This script will install Docker and clone the Tidal Connect Docker repository from https://github.com/code-SL/tidal-connect-docker and install it on your rAudio.
 >
+-------------
+>
+After the installation is complete, you can modify the DAC configuration in this file: /root/tidal-connect-docker/Docker/entrypoint.sh. However, the --playback-device "default" is set by rAudio, meaning rAudio is responsible for setting up the Sound Card, and Tidal Connect operates based on it with the value being "default."
+
+You can edit and change the DNS in this file: nano /root/tidal-connect-docker/Docker/.env.
+>
 ---------------
 OFF Tidal Connect
 > systemctl stop tidal
