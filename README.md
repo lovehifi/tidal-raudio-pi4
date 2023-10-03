@@ -14,3 +14,8 @@ OFF Tidal Connect
 ON Tidal Connect
 > systemctl restart tidal
 >
+------------------
+>
+Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
+>
+https://github.com/lovehifi/raudiolms-32bit
