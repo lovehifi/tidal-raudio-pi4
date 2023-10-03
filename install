@@ -1,12 +1,12 @@
 #!/bin/sh
 echo "Docker"
-sudo rm -f /var/lib/pacman/sync/*
-sudo pacman -Syy
-sudo pacman --noconfirm -S git
-sudo pacman --noconfirm -S docker-compose
-sudo pacman --noconfirm -S docker
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
+rm -f /var/lib/pacman/sync/*
+pacman -Syy
+pacman --noconfirm -S git
+pacman --noconfirm -S docker-compose
+pacman --noconfirm -S docker
+systemctl start docker.service
+systemctl enable docker.service
 
 echo "Clone Source"
 git clone https://github.com/code-SL/tidal-connect-docker
