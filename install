@@ -12,8 +12,8 @@ echo "Clone Source"
 git clone https://github.com/code-SL/tidal-connect-docker
 cd /tmp
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/entrypoint.sh
-chmod -R 755 entrypoint.sh
-cp -f entrypoint.sh /root/tidal-connect-docker/Docker/
+chmod -R 755 /tmp/entrypoint.sh
+cp -f /tmp/entrypoint.sh /root/tidal-connect-docker/Docker/
 cd /root/tidal-connect-docker
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/install.sh
 chmod -R 755 install.sh
