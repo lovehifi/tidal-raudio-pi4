@@ -73,8 +73,8 @@ select_playback_device()
 
 
 # define defaults
-FRIENDLY_NAME_DEFAULT=${HOSTNAME}
-MODEL_NAME_DEFAULT=${HOSTNAME}
+FRIENDLY_NAME_DEFAULT="rAudio"
+MODEL_NAME_DEFAULT="Pi 4"
 DOCKER_DNS_DEFAULT="8.8.8.8"
 DOCKER_IMAGE_DEFAULT="edgecrush3r/tidal-connect:latest"
 BUILD_OR_PULL_DEFAULT="pull"
