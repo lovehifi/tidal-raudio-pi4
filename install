@@ -2,9 +2,9 @@
 
 sudo rm -f /var/lib/pacman/sync/*
 sudo pacman -Syy
-sudo pacman -S git
-sudo pacman -S docker-compose
-sudo pacman -S docker
+sudo pacman --noconfirm -S git
+sudo pacman --noconfirm -S docker-compose
+sudo pacman --noconfirm -S docker
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 git clone https://github.com/code-SL/tidal-connect-docker
