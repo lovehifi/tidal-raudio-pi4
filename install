@@ -15,8 +15,11 @@ cd Docker
 ./build_docker.sh
 cd ..
 ./install.sh
+sleep 1
 cp /boot/cmdline.txt /boot/cmdline.txt.backup && sed -i '0,/ipv6.disable=1/{s/ipv6.disable=1//}' /boot/cmdline.txt
+sleep 1
 cp /root/tidal-connect-docker/Docker/entrypoint.sh /root/tidal-connect-docker/Docker/entrypoint.sh.backup
+sleep 1
 sed -i 's/HiFiBerry/rAudio/g' /root/tidal-connect-docker/Docker/entrypoint.sh
-
+sleep 1
 reboot
