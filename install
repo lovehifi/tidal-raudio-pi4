@@ -1,1 +1,19 @@
+#!/bin/sh
+
+sudo rm -f /var/lib/pacman/sync/*
+sudo pacman -Syy
+sudo pacman -S git
+sudo pacman -S docker-compose
+sudo pacman -S docker
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+git clone https://github.com/code-SL/tidal-connect-docker
+cd /root/tidal-connect-docker
+wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/install.sh
+chmod -R 755 install.sh
+cd Docker
+./build_docker.sh
+cd ..
+./install.sh
+cp /boot/cmdline.txt /boot/cmdline.txt.backup && sed -i '0,/ipv6.disable=1/{s/ipv6.disable=1//}' /boot/cmdline.txt
 
