@@ -1,5 +1,5 @@
 #!/bin/sh
-
+echo "Docker"
 sudo rm -f /var/lib/pacman/sync/*
 sudo pacman -Syy
 sudo pacman --noconfirm -S git
@@ -7,19 +7,26 @@ sudo pacman --noconfirm -S docker-compose
 sudo pacman --noconfirm -S docker
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
+
+echo "Clone Source"
 git clone https://github.com/code-SL/tidal-connect-docker
 cd /root/tidal-connect-docker
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/install.sh
 chmod -R 755 install.sh
+
+echo "Build Docker"
 cd Docker
 ./build_docker.sh
 cd ..
 ./install.sh
 sleep 1
+
+echo "Remove ipv6.disable=1 in /boot/cmdline.txt"
 cp /boot/cmdline.txt /boot/cmdline.txt.backup && sed -i '0,/ipv6.disable=1/{s/ipv6.disable=1//}' /boot/cmdline.txt
 sleep 1
 cp /root/tidal-connect-docker/Docker/entrypoint.sh /root/tidal-connect-docker/Docker/entrypoint.sh.backup
 sleep 1
+echo "Change Tidal Connect - Name"
 sed -i 's/HiFiBerry/rAudio/g' /root/tidal-connect-docker/Docker/entrypoint.sh
 sleep 1
 reboot
