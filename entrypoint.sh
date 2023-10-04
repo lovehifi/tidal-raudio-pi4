@@ -15,7 +15,7 @@ echo "Starting TIDAL Connect.."
    --disable-app-security false \
    --disable-web-security false \
    --enable-mqa-passthrough false \
-   --log-level 3 \
-   --enable-websocket-log "0" \
+   --log-level 0 \
+   --enable-websocket-log 0 \
    
 echo "TIDAL Connect Container Stopped.."
