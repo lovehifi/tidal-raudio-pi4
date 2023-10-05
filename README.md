@@ -10,8 +10,7 @@ This script will install Docker and clone the Tidal Connect Docker repository fr
 >
 Tidal Connect operates based on it with the DAC configuration automatically set from rAudio's '/etc/asound.conf'.
 >
-> Need to disable sound onboard
->
+
 You can edit/add the DNS in this file with the command nano /root/tidal-connect-docker/Docker/.env
 >
 Sample:
