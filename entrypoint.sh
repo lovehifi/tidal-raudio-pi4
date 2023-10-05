@@ -1,4 +1,12 @@
 #!/bin/bash
+echo "Off the sound onboard"
+grep -q "dtparam=audio=off" /boot/config.txt
+if [ $? -eq 0 ]; then
+echo "onboard off"
+else
+echo "dtparam=audio=off" | sudo tee -a /boot/config.txt
+echo "onboard to off"
+fi
 
 #export LD_LIBRARY_PATH=/app/ifi-tidal-release/lib
 echo "Starting Speaker Application in Background (TMUX)"
