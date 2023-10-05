@@ -8,7 +8,7 @@ This script will install Docker and clone the Tidal Connect Docker repository fr
 >
 -------------
 >
-After the installation is complete, you can modify the DAC configuration in this file: /root/tidal-connect-docker/Docker/entrypoint.sh. However, the --playback-device "default" follows the value of rAudio, meaning rAudio is responsible for setting up the Sound Card, and Tidal Connect operates based on it with the value being "default."
+After the installation is complete, you can modify the DAC configuration in this file: /root/tidal-connect-docker/Docker/entrypoint.sh. Tidal Connect operates based on it with the value being "card number" /etc/asound.conf"
 
 You can edit/add the DNS in this file with the command nano /root/tidal-connect-docker/Docker/.env
 >
