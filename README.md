@@ -13,7 +13,7 @@ Tidal Connect operates based on it with the DAC configuration automatically set 
 You can edit/add the DNS in this file with the command nano /root/tidal-connect-docker/Docker/.env
 >
 Sample:
-> DOCKER_DNS_DEFAULT=8.8.8.8
+> DOCKER_DNS=8.8.8.8
 >
 ---------------
 OFF Tidal Connect
