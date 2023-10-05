@@ -37,7 +37,5 @@ else
 echo "dtparam=audio=off" | sudo tee -a /boot/config.txt
 echo "onboard to off"
 fi
-
 reboot
-
 
