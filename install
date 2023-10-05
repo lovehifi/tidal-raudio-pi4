@@ -28,11 +28,7 @@ sleep 1
 echo "Remove the text ipv6.disable=1 in /boot/cmdline.txt"
 cp /boot/cmdline.txt /boot/cmdline.txt.backup && sed -i '0,/ipv6.disable=1/{s/ipv6.disable=1//}' /boot/cmdline.txt
 sleep 1
-#cp /root/tidal-connect-docker/Docker/entrypoint.sh /root/tidal-connect-docker/Docker/entrypoint.sh.backup
-#sleep 1
-#echo "Change the Tidal Connect - Name"
-#sed -i 's/HiFiBerry/rAudio/g' /root/tidal-connect-docker/Docker/entrypoint.sh
-#sleep 1
+
 reboot
 
 
