@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if grep -q "dtparam=audio=on" /boot/config.txt; then
-sudo sed -i '/dtparam=audio=on/d' /boot/config.txt
+sed -i '/dtparam=audio=on/d' /boot/config.txt
 else
 echo "No dtparam=audio=on"
 fi
@@ -9,10 +9,8 @@ fi
 echo "Off the sound onboard"
 grep -q "dtparam=audio=off" /boot/config.txt
 if [ $? -eq 0 ]; then
-echo "onboard off"
 else
 echo "dtparam=audio=off" | sudo tee -a /boot/config.txt
-echo "onboard to off"
 fi
 
 #export LD_LIBRARY_PATH=/app/ifi-tidal-release/lib
