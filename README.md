@@ -19,6 +19,7 @@ Sample:
 ------------------
 >
 Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
+>
 ---------------
 >
 ## Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
