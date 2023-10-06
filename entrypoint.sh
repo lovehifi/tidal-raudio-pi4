@@ -1,17 +1,5 @@
 #!/bin/bash
 
-if grep -q "dtparam=audio=on" /boot/config.txt; then
-sed -i '/dtparam=audio=on/d' /boot/config.txt
-else
-echo "No dtparam=audio=on"
-fi
-
-echo "Off the sound onboard"
-grep -q "dtparam=audio=off" /boot/config.txt
-if [ $? -eq 0 ]; then
-else
-echo "dtparam=audio=off" | sudo tee -a /boot/config.txt
-fi
 
 #export LD_LIBRARY_PATH=/app/ifi-tidal-release/lib
 echo "Starting Speaker Application in Background (TMUX)"
