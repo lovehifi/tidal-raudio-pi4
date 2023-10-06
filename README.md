@@ -11,8 +11,8 @@ Special thanks to GioF71 for creating it. I highly appreciate its stability and,
 >
 ------------
 >
--- Tidal Connect operates based on it with the DAC configuration automatically set from rAudio's '/etc/asound.conf'.
--- You can edit/add the DNS in this file with the command nano /root/tidal-connect-docker/Docker/.env
+- Tidal Connect operates based on it with the DAC configuration automatically set from rAudio's '/etc/asound.conf'.
+- You can edit/add the DNS in this file with the command nano /root/tidal-connect-docker/Docker/.env
 >
 Sample:
 > DNS_SERVER_LIST=8.8.8.8
@@ -20,8 +20,8 @@ Sample:
 
 ------------------
 >
--- If you are playing Squeezelite (SQ), please switch the Squeezelite status to **Player Off ans reboot** before playing music from Tidal Connect.**
--- At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
+- If you are playing Squeezelite (SQ), please switch the Squeezelite status to **Player Off ans reboot** before playing music from Tidal Connect.**
+- At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
 
 > systemctl restart tidal
 ------------------
