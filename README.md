@@ -27,7 +27,7 @@ ON Tidal Connect
 ------------------
 Note:
 >
-If you are playing Squeezelite, please switch the Squeezelite status to Power off before playing music from Tidal Connect.
+If you are playing Squeezelite, please switch the Squeezelite status to Player Off before playing music from Tidal Connect.
 >
 ## Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
 >
