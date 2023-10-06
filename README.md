@@ -6,9 +6,6 @@ The simple script install Tidal Connect for rAudio 64 bit (Pi 4)
 >
 This script will install Docker and clone the Tidal Connect Docker repository from [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/) and install it on your rAudio.
 >
->
-Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
->
 ------------
 >
 - Tidal Connect operates based on it with the DAC configuration automatically set from rAudio's '/etc/asound.conf'.
@@ -21,8 +18,7 @@ Sample:
 > systemctl restart tidal
 ------------------
 >
-Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository https://github.com/GioF71/tidal-connect
->
+Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
 ---------------
 >
 ## Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
