@@ -1,0 +1,29 @@
+---
+version: '3'
+
+services:
+  tidal-connect:
+    image: edgecrush3r/tidal-connect:latest
+    container_name: tidal-connect
+    tty: true
+    network_mode: host
+    devices:
+     - /dev/snd
+    environment:
+     - CARD_NAME=${CARD_NAME:-}
+     - CARD_INDEX=${CARD_INDEX:-}
+     - FRIENDLY_NAME=${FRIENDLY_NAME:-TIDAL connect}
+     - MODEL_NAME=${MODEL_NAME:-Audio Streamer}
+     - MQA_CODEC=${MQA_CODEC:-false}
+     - MQA_PASSTHROUGH=${MQA_PASSTHROUGH:-false}
+     - SLEEP_TIME_SEC=${SLEEP_TIME:-3}
+     - RESTART_ON_FAIL=${RESTART_ON_FAIL:-1}
+     - RESTART_WAIT_SEC=${RESTART_WAIT_SEC:-30}
+    volumes:
+      - ./bin/entrypoint.sh:/entrypoint.sh
+      - /var/run/dbus:/var/run/dbus
+      - /etc/asound.conf:/etc/asound.conf
+      - /opt:/opt
+    dns:
+      - ${DNS_SERVER_LIST:-8.8.8.8 8.8.4.4}
+    restart: unless-stopped
