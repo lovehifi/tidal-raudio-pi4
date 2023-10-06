@@ -16,14 +16,12 @@ You can edit/add the DNS in this file with the command nano /root/tidal-connect-
 Sample:
 > DOCKER_DNS=8.8.8.8
 >
----------------
-OFF Tidal Connect
-> systemctl stop tidal
->
----------------
-ON Tidal Connect
-> systemctl restart tidal
->
+----------
+At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
+
+systemctl restart tidal
+
+
 ------------------
 Note:
 >
