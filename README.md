@@ -16,16 +16,17 @@ You can edit/add the DNS in this file with the command nano /root/tidal-connect-
 Sample:
 > DOCKER_DNS=8.8.8.8
 >
-----------
-At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
-
-systemctl restart tidal
-
 
 ------------------
 Note:
 >
 If you are playing Squeezelite, please switch the Squeezelite status to Player Off before playing music from Tidal Connect.
+>
+At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
+
+systemctl restart tidal
+
+
 >
 ## Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
 >
