@@ -20,11 +20,13 @@ cd /tmp
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/entrypoint.sh
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/tidal.service
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/env
+wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/docker-compose.yaml
 chmod -R 755 /tmp/entrypoint.sh
 chmod -R 755 /tmp/tidal.service
 cp -f /tmp/entrypoint.sh /root/tidal-connect/bin/
 cp -f /tmp/tidal.service /etc/systemd/system/
 cp -f /tmp/env /root/tidal-connect/.env
+cp -f /tmp/docker-compose.yaml /root/tidal-connect/
 cd /root/tidal-connect
 git pull
 
