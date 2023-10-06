@@ -23,7 +23,7 @@ Sample:
 ------------------
 Note:
 >
-If you are playing Squeezelite, please switch the Squeezelite status to Player Off before playing music from Tidal Connect.
+If you are playing Squeezelite, please switch the Squeezelite status to Player Off ans reboot before playing music from Tidal Connect.
 >
 At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
 
