@@ -29,7 +29,8 @@ cd /root/tidal-connect
 git pull
 
 echo "Build Docker"
-docker-compose up -d --force-recreate
+docker-compose up -d
+#docker-compose up -d --force-recreate
 
 sleep 1
 
