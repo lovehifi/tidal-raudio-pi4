@@ -5,15 +5,24 @@ pacman -Syy
 pacman --noconfirm -S git
 pacman --noconfirm -S docker-compose
 pacman --noconfirm -S docker
+systemctl daemon-reload
 systemctl start docker.service
 systemctl enable docker.service
+
+if [ -e /etc/systemd/system/tidal.service ]; then
+    systemctl disable tidal.service
+    rm -f /etc/systemd/system/tidal.service
+fi
 
 echo "Clone Source"
 git clone https://github.com/GioF71/tidal-connect.git
 cd /tmp
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/entrypoint.sh
+wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/tidal.service
 chmod -R 755 /tmp/entrypoint.sh
+chmod -R 755 /tmp/tidal.service
 cp -f /tmp/entrypoint.sh /root/tidal-connect/bin/
+cp -f /tmp/tidal.service /etc/systemd/system/
 cd /root/tidal-connect
 git pull
 
@@ -40,5 +49,8 @@ else
 echo "dtparam=audio=off" | sudo tee -a /boot/config.txt
 echo "onboard to off"
 fi
+systemctl daemon-reload
+systemctl enable tidal.service
+systemctl restart tidal.service
 reboot
 
