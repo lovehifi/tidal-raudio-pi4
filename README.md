@@ -24,7 +24,7 @@ If you are playing Squeezelite, please switch the Squeezelite status to Player O
 >
 At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
 
-systemctl restart tidal
+> systemctl restart tidal
 
 
 >
