@@ -9,20 +9,17 @@ systemctl start docker.service
 systemctl enable docker.service
 
 echo "Clone Source"
-git clone https://github.com/code-SL/tidal-connect-docker
+git clone https://github.com/GioF71/tidal-connect.git
 cd /tmp
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/entrypoint.sh
 chmod -R 755 /tmp/entrypoint.sh
-cp -f /tmp/entrypoint.sh /root/tidal-connect-docker/Docker/
-cd /root/tidal-connect-docker
-wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/install.sh
-chmod -R 755 install.sh
+cp -f /tmp/entrypoint.sh /root/tidal-connect/bin/
+cd /root/tidal-connect
+git pull
 
 echo "Build Docker"
-cd Docker
-./build_docker.sh
-cd ..
-./install.sh
+docker-compose up -d --force-recreate
+
 sleep 1
 
 echo "Remove the text ipv6.disable=1 in /boot/cmdline.txt"
