@@ -9,7 +9,7 @@ This script will install Docker and clone the Tidal Connect Docker repository fr
 >
 Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
 >
-
+------------
 >
 Tidal Connect operates based on it with the DAC configuration automatically set from rAudio's '/etc/asound.conf'.
 >
