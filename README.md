@@ -17,6 +17,12 @@ Sample:
 - At times, if you encounter a successful Tidal Connect connection but there is no sound, try restarting. The command to restart Tidal Connect is
 > systemctl restart tidal
 ------------------
+
+## New update #1
+>
+With this update, you no longer need to reboot when you want to listen to Tidal Connect. Simply press SQ64-rAudio Player Off, and Tidal Connect will be ready for you to connect. When you press Player On, Tidal Connect will automatically turn off to reduce load on your system.
+>
+> wget -O - https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/update | sh
 >
 Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
 >
