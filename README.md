@@ -19,7 +19,7 @@ Sample:
 ------------------
 
 ## New update #1
-#### Support for LMS Squeezelite on rAudio
+#### Support for LMS & Squeezelite on rAudio
 >
 With this update, you no longer need to reboot when you want to listen to Tidal Connect. Simply press SQ64-rAudio Player Off and wait a few seconds, Tidal Connect will be ready for you to connect. When you press Player On and wait a few seconds, Tidal Connect will automatically turn off to reduce load on your system.
 >
