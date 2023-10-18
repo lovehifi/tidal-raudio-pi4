@@ -31,7 +31,7 @@ Change DNS
 >
 > nano /root/tidal-connect/.env
 >
-Sample.env file:
+Sample .env file:
 >
 FRIENDLY_NAME=TIDAL Connect
 >
