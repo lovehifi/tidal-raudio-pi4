@@ -25,6 +25,19 @@ With this update, you no longer need to reboot when you want to listen to Tidal 
 >
 > wget -O - https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/update | sh
 >
+--------
+## Tips
+Change DNS
+>
+> nano /root/tidal-connect/.env
+>
+Sample.env file:
+FRIENDLY_NAME=TIDAL Connect
+MODEL_NAME=Pi 4
+MQA_PASSTHROUGH=false
+MQA_CODEC=false
+DNS_SERVER_LIST=8.8.8.8 8.8.4.4
+
 ----------
 >
 Special thanks to GioF71 for creating it. I highly appreciate its stability and, above all, the enthusiastic support on his repository [GioF71/tidal-connect](https://github.com/GioF71/tidal-connect/)
@@ -33,3 +46,4 @@ Special thanks to GioF71 for creating it. I highly appreciate its stability and,
 ## Tidal Connect for rAudio 32 bit (Pi 2, Pi 3)
 >
 https://github.com/lovehifi/tidal-raudio
+
