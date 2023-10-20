@@ -57,5 +57,5 @@ fi
 systemctl daemon-reload
 systemctl enable tidal.service
 systemctl restart tidal.service
-reboot
+#reboot
 
