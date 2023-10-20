@@ -33,15 +33,7 @@ Change DNS
 >
 Sample .env file:
 >
-FRIENDLY_NAME=TIDAL Connect
->
-MODEL_NAME=Pi 4
->
-MQA_PASSTHROUGH=false
->
-MQA_CODEC=false
->
-DNS_SERVER_LIST=8.8.8.8 8.8.4.4
+> DNS_SERVER_LIST=8.8.8.8 8.8.4.4
 
 ----------
 >
