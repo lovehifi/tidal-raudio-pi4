@@ -3,7 +3,7 @@
 cd /tmp
 wget https://raw.githubusercontent.com/lovehifi/tidal-raudio-pi4/main/Player.tar.gz
 tar -xzvf /tmp/Player.tar.gz --overwrite -C /
-
+systemctl disable tidal.service
 systemctl daemon-reload
 systemctl stop logitechmediaserver-git.service
 systemctl restart logitechmediaserver-git.service
